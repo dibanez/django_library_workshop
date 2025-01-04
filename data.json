@@ -1,0 +1,56 @@
+{
+  "authors": [
+    {
+      "name": "Gabriel García Márquez",
+      "bio": "Escritor colombiano, autor de 'Cien años de soledad' y ganador del Premio Nobel de Literatura.",
+      "website": "https://es.wikipedia.org/wiki/Gabriel_García_Márquez"
+    },
+    {
+      "name": "J.K. Rowling",
+      "bio": "Autora británica conocida por la serie de libros 'Harry Potter'.",
+      "website": "https://www.jkrowling.com"
+    },
+    {
+      "name": "George Orwell",
+      "bio": "Autor británico, conocido por '1984' y 'Rebelión en la granja'.",
+      "website": "https://es.wikipedia.org/wiki/George_Orwell"
+    },
+    {
+      "name": "Isabel Allende",
+      "bio": "Escritora chilena, autora de 'La casa de los espíritus'.",
+      "website": "https://www.isabelallende.com"
+    }
+  ],
+  "books": [
+    {
+      "title": "Cien años de soledad",
+      "author": "Gabriel García Márquez",
+      "published_date": "1967-05-30",
+      "is_available": true
+    },
+    {
+      "title": "Harry Potter y la piedra filosofal",
+      "author": "J.K. Rowling",
+      "published_date": "1997-06-26",
+      "is_available": true
+    },
+    {
+      "title": "1984",
+      "author": "George Orwell",
+      "published_date": "1949-06-08",
+      "is_available": false
+    },
+    {
+      "title": "Rebelión en la granja",
+      "author": "George Orwell",
+      "published_date": "1945-08-17",
+      "is_available": true
+    },
+    {
+      "title": "La casa de los espíritus",
+      "author": "Isabel Allende",
+      "published_date": "1982-01-01",
+      "is_available": true
+    }
+  ]
+}
