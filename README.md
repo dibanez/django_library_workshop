@@ -137,6 +137,16 @@ Este proyecto es una aplicación de gestión de biblioteca construida con **Djan
 
 ---
 
+### 🧪 **Tests**
+
+El proyecto incluye una suite completa de tests que cubren modelos, admin y vistas:
+
+1. **Ejecutar todos los tests:**
+   ```bash
+   python manage.py test
+
+---
+
 ### 🤝 **Contribuciones**
 
 ¡Toda contribución es bienvenida! Si deseas mejorar el proyecto, por favor abre un **Pull Request** o un **Issue** en GitHub.
