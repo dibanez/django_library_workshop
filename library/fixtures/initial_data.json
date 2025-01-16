@@ -1,0 +1,234 @@
+[
+    {
+        "model": "library.author",
+        "pk": 1,
+        "fields": {
+            "name": "Gabriel García Márquez",
+            "bio": "Escritor colombiano, ganador del Premio Nobel de Literatura en 1982. Máximo exponente del realismo mágico.",
+            "website": "https://literatura.us/garciamarquez"
+        }
+    },
+    {
+        "model": "library.author",
+        "pk": 2,
+        "fields": {
+            "name": "Jorge Luis Borges",
+            "bio": "Escritor argentino conocido por sus cuentos breves y ensayos. Su obra, fundamental en la literatura y en la filosofía universal, trasciende géneros.",
+            "website": "https://www.borges.pitt.edu"
+        }
+    },
+    {
+        "model": "library.author",
+        "pk": 3,
+        "fields": {
+            "name": "Isabel Allende",
+            "bio": "Escritora chilena, miembro de la Academia Estadounidense de las Artes y las Letras. Sus obras tratan temas de memoria histórica y feminismo.",
+            "website": "https://www.isabelallende.com"
+        }
+    },
+    {
+        "model": "library.author",
+        "pk": 4,
+        "fields": {
+            "name": "Julio Cortázar",
+            "bio": "Escritor argentino considerado uno de los autores más innovadores y originales de su tiempo, maestro del relato corto.",
+            "website": "https://www.juliacortazar.com.ar"
+        }
+    },
+    {
+        "model": "library.author",
+        "pk": 5,
+        "fields": {
+            "name": "Mario Vargas Llosa",
+            "bio": "Escritor peruano ganador del Premio Nobel de Literatura en 2010. Sus obras abordan temas políticos y sociales.",
+            "website": "https://www.mvargasllosa.com"
+        }
+    },
+    {
+        "model": "library.author",
+        "pk": 6,
+        "fields": {
+            "name": "Octavio Paz",
+            "bio": "Poeta, ensayista y diplomático mexicano, Premio Nobel de Literatura 1990. Su obra poética es una de las más importantes de la literatura hispanoamericana.",
+            "website": "https://www.octaviopaz.org"
+        }
+    },
+    {
+        "model": "library.author",
+        "pk": 7,
+        "fields": {
+            "name": "Pablo Neruda",
+            "bio": "Poeta chileno, Premio Nobel de Literatura en 1971. Considerado entre los más importantes poetas del siglo XX.",
+            "website": "https://www.fundacionneruda.org"
+        }
+    },
+    {
+        "model": "library.author",
+        "pk": 8,
+        "fields": {
+            "name": "Carlos Fuentes",
+            "bio": "Escritor mexicano y uno de los autores más destacados de la literatura latinoamericana. Sus obras exploran la identidad mexicana.",
+            "website": "https://www.carlosfuentes.org"
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 1,
+        "fields": {
+            "title": "Cien años de soledad",
+            "author": 1,
+            "published_date": "1967-05-30",
+            "is_available": true
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 2,
+        "fields": {
+            "title": "El amor en los tiempos del cólera",
+            "author": 1,
+            "published_date": "1985-12-01",
+            "is_available": true
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 3,
+        "fields": {
+            "title": "Crónica de una muerte anunciada",
+            "author": 1,
+            "published_date": "1981-01-01",
+            "is_available": false
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 4,
+        "fields": {
+            "title": "El Aleph",
+            "author": 2,
+            "published_date": "1949-06-15",
+            "is_available": true
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 5,
+        "fields": {
+            "title": "Ficciones",
+            "author": 2,
+            "published_date": "1944-01-01",
+            "is_available": true
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 6,
+        "fields": {
+            "title": "La casa de los espíritus",
+            "author": 3,
+            "published_date": "1982-01-01",
+            "is_available": true
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 7,
+        "fields": {
+            "title": "Paula",
+            "author": 3,
+            "published_date": "1994-01-01",
+            "is_available": false
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 8,
+        "fields": {
+            "title": "Rayuela",
+            "author": 4,
+            "published_date": "1963-06-28",
+            "is_available": true
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 9,
+        "fields": {
+            "title": "Las armas secretas",
+            "author": 4,
+            "published_date": "1959-01-01",
+            "is_available": true
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 10,
+        "fields": {
+            "title": "La ciudad y los perros",
+            "author": 5,
+            "published_date": "1963-01-01",
+            "is_available": true
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 11,
+        "fields": {
+            "title": "Conversación en La Catedral",
+            "author": 5,
+            "published_date": "1969-01-01",
+            "is_available": false
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 12,
+        "fields": {
+            "title": "El laberinto de la soledad",
+            "author": 6,
+            "published_date": "1950-01-01",
+            "is_available": true
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 13,
+        "fields": {
+            "title": "Veinte poemas de amor y una canción desesperada",
+            "author": 7,
+            "published_date": "1924-01-01",
+            "is_available": true
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 14,
+        "fields": {
+            "title": "Canto general",
+            "author": 7,
+            "published_date": "1950-01-01",
+            "is_available": true
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 15,
+        "fields": {
+            "title": "La muerte de Artemio Cruz",
+            "author": 8,
+            "published_date": "1962-01-01",
+            "is_available": true
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 16,
+        "fields": {
+            "title": "Aura",
+            "author": 8,
+            "published_date": "1962-01-01",
+            "is_available": false
+        }
+    }
+]

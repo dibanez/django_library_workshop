@@ -263,4 +263,22 @@ poetry.toml
 # LSP config files
 pyrightconfig.json
 
+
+# Docker
+.docker/
+docker-compose.override.yml
+
+# Poetry
+poetry.lock
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Sistema
+.DS_Store
+Thumbs.db
+
 # End of https://www.toptal.com/developers/gitignore/api/django,python

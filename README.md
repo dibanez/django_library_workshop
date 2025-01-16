@@ -147,6 +147,35 @@ El proyecto incluye una suite completa de tests que cubren modelos, admin y vist
 
 ---
 
+### 🐳 **Configuración con Docker**
+
+El proyecto puede ser ejecutado usando Docker y Docker Compose, lo que facilita su despliegue y desarrollo.
+
+#### Prerrequisitos
+- Docker
+- Docker Compose
+
+#### Iniciar el proyecto
+1. Construir e iniciar los contenedores:
+   ```bash
+   docker-compose up --build
+
+---
+
+### 📥 **Carga de Datos Iniciales**
+
+El proyecto incluye fixtures con datos de ejemplo que pueden ser cargados de varias formas:
+
+#### Con Docker:
+```bash
+# Los datos se cargan automáticamente al iniciar
+docker-compose up --build
+
+# O manualmente
+docker-compose exec web python manage.py loaddata initial_data.json
+
+---
+
 ### 🤝 **Contribuciones**
 
 ¡Toda contribución es bienvenida! Si deseas mejorar el proyecto, por favor abre un **Pull Request** o un **Issue** en GitHub.
