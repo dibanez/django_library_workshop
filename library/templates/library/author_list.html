@@ -1,0 +1,34 @@
+{% extends 'library/base.html' %}
+
+{% block title %}Autores{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Autores</h1>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for author in authors %}
+    <div class="col">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">{{ author.name }}</h5>
+                <p class="card-text">{{ author.bio|truncatewords:30 }}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <a href="{% url 'author_detail' author.pk %}" class="btn btn-primary">Ver detalles</a>
+                    {% if author.website %}
+                    <a href="{{ author.website }}" class="btn btn-outline-secondary" target="_blank">
+                        Sitio web
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    {% empty %}
+    <div class="col-12">
+        <div class="alert alert-info">
+            No hay autores registrados.
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

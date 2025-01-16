@@ -1,0 +1,30 @@
+{% extends 'library/base.html' %}
+
+{% block title %}{{ book.title }}{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-body">
+        <h1 class="card-title">{{ book.title }}</h1>
+        <h3 class="card-subtitle mb-3 text-muted">
+            por <a href="{% url 'author_detail' book.author.pk %}">{{ book.author.name }}</a>
+        </h3>
+        
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <p><strong>Fecha de publicación:</strong> {{ book.published_date }}</p>
+            </div>
+            <div class="col-md-6">
+                <p>
+                    <strong>Estado:</strong>
+                    {% if book.is_available %}
+                        <span class="badge bg-success">Disponible</span>
+                    {% else %}
+                        <span class="badge bg-danger">No Disponible</span>
+                    {% endif %}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
