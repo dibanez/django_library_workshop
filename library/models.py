@@ -8,6 +8,9 @@ class Author(models.Model):
         blank=True, help_text="Enlace al sitio web oficial del autor"
     )
 
+    class Meta:
+        ordering = ["name"]
+
     def get_available_books(self):
         return self.book_set.filter(is_available=True)
 
@@ -23,6 +26,9 @@ class Book(models.Model):
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
     published_date = models.DateField()
     is_available = models.BooleanField(default=True)
+
+    class Meta:
+        ordering = ["title"]
 
     def mark_as_unavailable(self):
         self.is_available = False
