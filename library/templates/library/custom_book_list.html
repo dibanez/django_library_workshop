@@ -1,0 +1,32 @@
+{% extends 'library/base.html' %}
+
+{% block title %}Libros Disponibles{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Libros Disponibles</h1>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for book in books %}
+    <div class="col">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">{{ book.title }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">
+                    <a href="{% url 'author_detail' book.author.pk %}">{{ book.author.name }}</a>
+                </h6>
+                <p class="card-text">
+                    <small class="text-muted">Publicado: {{ book.published_date }}</small>
+                </p>
+                <a href="{% url 'book_detail' book.pk %}" class="btn btn-primary">Ver detalles</a>
+            </div>
+        </div>
+    </div>
+    {% empty %}
+    <div class="col-12">
+        <div class="alert alert-info">
+            No hay libros disponibles en este momento.
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

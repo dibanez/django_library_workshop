@@ -1,0 +1,50 @@
+{% extends 'library/base.html' %}
+
+{% block title %}{{ author.name }}{% endblock %}
+
+{% block content %}
+<div class="card mb-4">
+    <div class="card-body">
+        <h1 class="card-title">{{ author.name }}</h1>
+        {% if author.website %}
+        <a href="{{ author.website }}" class="btn btn-outline-primary mb-3" target="_blank">
+            Visitar sitio web
+        </a>
+        {% endif %}
+        
+        <div class="card-text">
+            <p>{{ author.bio }}</p>
+        </div>
+    </div>
+</div>
+
+<h2>Libros de {{ author.name }}</h2>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for book in author.book_set.all %}
+    <div class="col">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">{{ book.title }}</h5>
+                <p class="card-text">
+                    <small class="text-muted">Publicado: {{ book.published_date }}</small>
+                </p>
+                {% if book.is_available %}
+                    <span class="badge bg-success">Disponible</span>
+                {% else %}
+                    <span class="badge bg-danger">No Disponible</span>
+                {% endif %}
+                <div class="mt-2">
+                    <a href="{% url 'book_detail' book.pk %}" class="btn btn-primary">Ver detalles</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% empty %}
+    <div class="col-12">
+        <div class="alert alert-info">
+            Este autor aún no tiene libros registrados.
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
