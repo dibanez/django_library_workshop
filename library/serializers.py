@@ -13,12 +13,26 @@ class BookListSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Book
-        fields = ["id", "title", "author_name", "published_date", "is_available"]
+        fields = [
+            "id",
+            "title",
+            "author",
+            "author_name",
+            "published_date",
+            "is_available",
+        ]
 
 
 class BookDetailSerializer(serializers.ModelSerializer):
-    author = AuthorSerializer(read_only=True)
+    author_name = serializers.CharField(source="author.name", read_only=True)
 
     class Meta:
         model = Book
-        fields = ["id", "title", "author", "published_date", "is_available"]
+        fields = [
+            "id",
+            "title",
+            "author",
+            "author_name",
+            "published_date",
+            "is_available",
+        ]
